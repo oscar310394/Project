@@ -1,6 +1,6 @@
 .div_inicio
 {
-    border: 1px solid fuchsia;
+    /*border: 1px solid fuchsia;*/
     width: 100%;
     height: 44px;
     /*background-color:black;
@@ -44,19 +44,104 @@ box-shadow: -1px 0px 44px -1px rgba(255,255,255,1);
     border: 1px groove black;
     margin: auto;
     
-    
 }
 
 .div_artinc
 {
     background-color: green;
     height: 250px;
-    margin-top: 260px;
-    
+    margin-top: 260px;   
+}
+
+.div_registro
+{
+   height: 800px;
+   width: 35%; 
+   margin-top: 50px;
+}
+
+label.lblregistro
+{
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+    padding: 2px;
+    margin: 2px;
 
 }
 
+.inpreg
+{
+    width: 80%;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 2px;
+    font-size: 18px;
+    background-color: white;
+    background-image: url("condominio.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    margin: 5px;
+}
+.nombrefoto
+{
+    background-image: url("nombre.png");
+}
+.apellidofoto
+{
+    background-image: url("genetica.png");
+}
+.telefonofoto
+{
+    background-image: url("telefono.png");
+}
+.emailfoto
+{
+    background-image: url("email.png");
+}
+.passwordfoto
+{
+    background-image: url("password.png");
+}
 
+input.borderinp:focus
+{
+    outline-width: 0;
+    border: 2px solid black;
+}
+
+.div_labelreg
+{
+    border: 3px solid red;
+    width: 65%;
+    height: 660px;
+    margin-left: 100px;
+}
+
+.div_buttreg
+{
+    margin-top: 30px;
+    border: 3px solid blue;
+    width: 20%;
+    height: 45px;
+    float: right;
+
+}
+
+.buttonreg
+{
+    width: 85%;
+    font-family: "Times New Roman", Times, serif;
+    padding: 6px;
+    font-size: 18px;
+    margin: 2px;
+    
+}
+
+ul li 
+{
+list-style-type: none;
+}
 
 #prubaBody
 {
