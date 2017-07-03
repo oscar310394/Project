@@ -2,25 +2,26 @@
     <head>
         <meta charset="utf-8">
         <title>Registro</title>
-        <link href="projectCSS.css" rel="stylesheet" type="text/css" >
+        <link href="registroCSS.css" rel="stylesheet" type="text/css" >
     </head>
-    <body>
+    <body id="imagenfondo">
         <div class="div_general div_registro">
-        <form>
+        <form id="formreg">
             <div class="div_labelreg">
             <ul>
                 <li><label class="lblregistro">Nombre Condominio: </label> <input class="inpreg borderinp" type="text"></li>
-                <li><label class="lblregistro">Nombre: </label> <input class="inpreg nombrefoto borderinp" type="text"></li>
+                <li><label class="lblregistro">Nombre: </label> <input class="inpreg borderinp" id="nombrefoto" type="text"></li>
                 <li><label class="lblregistro">Primer Apellido: </label> <input class="inpreg apellidofoto borderinp" type="text"></li>
                 <li><label class="lblregistro">Segundo Apellido: </label> <input class="inpreg apellidofoto borderinp" type="text"></li>
-                <li><label class="lblregistro">Teléfono: </label> <input class="inpreg telefonofoto borderinp" type="text"></li>
-                <li><label class="lblregistro">Correo Electrónico: </label> <input class="inpreg emailfoto borderinp" type="text"></li>
+                <li><label class="lblregistro">Teléfono: </label> <input class="inpreg borderinp" id="telefonofoto" type="text"></li>
+                <li><label class="lblregistro">Correo Electrónico: </label> <input class="inpreg borderinp" id="emailfoto" type="text"></li>
                 <li><label class="lblregistro">Contraseña: </label> <input class="inpreg passwordfoto borderinp" type="password"></li>
                 <li><label class="lblregistro">Repetir Contraseña: </label> <input class="inpreg passwordfoto borderinp" type="password"></li>
             </ul>
             </div>
+
         <div class="div_buttreg">
-            <button class="buttonreg">Aceptar</button>
+            <button class="buttonreg" id="sombrabutt">Aceptar</button>
         </div>
         </form>
         

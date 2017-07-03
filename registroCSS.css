@@ -1,0 +1,123 @@
+.div_general
+{
+    width: 32%;
+    height: 500px;
+    margin: auto;
+    background-color:rgba(255,255,255,0.6);
+    border-radius: 2px;
+    padding-top: 10px;
+}
+
+.div_registro
+{
+    height: 800px;
+    width: 42%; 
+    margin-top: 50px;
+}
+
+.div_labelreg
+{
+    margin:auto;
+    width: 65%;
+    height: 680px;
+}
+
+form#formreg
+{
+    margin: auto;
+    height: 745px;
+    width: 90%;
+}
+
+label.lblregistro
+{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2px;
+    margin: 2px;
+}
+
+.inpreg
+{
+    width: 85%;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 2px;
+    font-size: 18px;
+    background-color: white;
+    background-image: url("condominio.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    margin: 5px;
+}
+
+#nombrefoto
+{
+    background-image: url("nombre.png");
+}
+
+.apellidofoto
+{
+    background-image: url("genetica.png");
+}
+
+#telefonofoto
+{
+    background-image: url("telefono.png");
+}
+
+#emailfoto
+{
+    background-image: url("email.png");
+}
+
+.passwordfoto
+{
+    background-image: url("password.png");
+}
+
+input.borderinp:focus
+{
+    outline-width: 0;
+    border: 2px solid black;
+}
+
+.div_buttreg
+{
+    width: 100%;
+    height: 33px;
+    background:rgba(0,0,0,0.8);
+    border-radius: 2px;
+    margin:auto;
+}
+
+.buttonreg
+{
+    padding: 6px;
+    font-size: 18px;
+    border: none;
+    border-radius: 2px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(245,245,245,0.4);
+    color: black;
+    margin-bottom: 0px;
+  
+}
+
+#sombrabutt:hover
+{
+    background-color: white;
+}
+
+ul li 
+{
+list-style-type: none;
+}
+
+#imagenfondo
+{
+    background-image: url("ny.jpg");
+    background-size: 100% auto;
+}
