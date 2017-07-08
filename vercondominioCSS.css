@@ -1,0 +1,228 @@
+.div_inicio
+{
+    width: 100%;
+    height: 44px;
+    background:rgba(0,0,0,0.6);
+    border-radius: 2px;
+}
+
+button.menubut
+{
+    padding: 6px;
+    font-size: 18px;
+    border: none;
+    border-radius: 2px;
+    width: 10%;
+    margin: 5px;
+    margin-bottom: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(245,245,245,0.4);
+    color: black;
+    float:left;    
+}
+
+button.buttonleft
+{
+    float: right;
+}
+.sombrabutt:hover
+{
+    background-color: white;
+}
+
+.div_general
+{
+    display: block;
+    width: 20%;
+    height: 500px;
+    margin: auto;
+    
+}
+
+.div_filtros
+{
+    border: 1px groove fuchsia;
+    float: left;
+    height: 390px;
+    width: 18%;
+    margin-top: 200px;
+    margin-left: 50px;
+    background-color:rgba(255,255,255,0.6);
+}
+
+#imagenfondo
+{
+    background-image: url("ny.jpg");
+    background-size: 100% auto;
+}
+
+.filtros
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-bottom: 5px;
+    padding: 3px;
+    width: 40%;
+    height: 37px;
+}
+
+.prueba
+{
+   margin-left:20px;
+   display: block;
+}
+
+#buttonfiltro
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    width: 30%;
+    margin-left: 170px;
+}
+
+ul li 
+{
+list-style-type: none;
+}
+
+
+#main 
+{
+    background-color: #ffffff;
+	float: right;
+    margin-right: 150px;
+    margin-top: 200px;
+	width: calc(100% - 4rem);
+	max-width: 72rem;
+		
+}
+
+#main > * 
+{
+	padding: 4rem 4rem 2rem 4rem;
+    border-top: solid 2px #eeeeee;
+	margin: 0;   
+}
+
+#main > *:first-child 
+{
+	border-top: 0;
+}
+
+#main > footer 
+{
+	text-align: center;
+}
+
+#main > .post 
+{
+	padding: 8rem 8rem 6rem 8rem ;
+}
+			
+#main > .post header.major > .date 
+{
+	margin-top: -2rem;
+}
+
+#main > .post header.major > h1, #main > .post header.major h2 
+{
+	font-size: 4rem;
+	line-height: 1.1;
+	margin: 0 0 2rem 0;
+}
+
+#main > .post.featured 
+{
+	text-align: center;
+}
+
+
+#main > .posts 
+{
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-moz-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-moz-align-items: stretch;
+	-webkit-align-items: stretch;
+	-ms-align-items: stretch;
+	align-items: stretch;
+	text-align: center;
+	width: 100%;
+	padding: 0;
+}
+
+#main > .posts > * 
+{
+	-moz-flex-shrink: 1;
+	-webkit-flex-shrink: 1;
+	-ms-flex-shrink: 1;
+	flex-shrink: 1;
+	-moz-flex-grow: 0;
+	-webkit-flex-grow: 0;
+	-ms-flex-grow: 0;
+	flex-grow: 0;
+}
+
+#main > .posts > * 
+{
+	width: 50%;
+}
+
+#main > .posts > * 
+{
+    padding: 2rem;
+	width: 50%;			
+}
+
+#main > .posts > article 
+{
+	border-color: #eeeeee;
+	border-left-width: 2px;
+	border-style: solid;
+	border-top-width: 2px;
+	text-align: center;
+}
+
+#main > .posts > article > :last-child 
+{
+	margin-bottom: 0;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color: black;
+}
+
+img
+{
+    width: 45%;
+    height: 170px;
+    float: left;
+    margin-left: 5px;
+}
+
+
+.lbl
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.div_info
+{
+    float: right;
+    width: 45%;
+    border: 1px groove greenyellow;
+    text-align: left;
+}
+
+li
+{
+margin-bottom: 6px;
+}
