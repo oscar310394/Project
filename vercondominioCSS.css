@@ -108,7 +108,7 @@ body
 
 ul li 
 {
-    list-style-type: none;
+    
 }
 
 #main 
@@ -239,7 +239,7 @@ img
 .div_info
 {
     float: right;
-    width: 45%;
+    width: 47%;
     border: 1px solid black;
     text-align: left;
     background-color: white;
@@ -248,4 +248,5 @@ img
 li
 {
     margin-bottom: 6px;
+    list-style-type: none;
 }
