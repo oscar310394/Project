@@ -1,31 +1,78 @@
 <!DOCTYPE html>
-	<head>
-		<meta charset="utf-8">
-		<title>Inicio</title>
-		<link href="inicioCSS.css" rel="stylesheet" type="text/css">
-	</head>
-	    
-	<body>
-        
-	    <div class="div_inicio">
-            <nav>
-            <a href="inicio.html"><button class="menubut sombrabutt">Inicio</button></a>
-            <a href="vercondominio.html"><button class="menubut sombrabutt">Condominios</button></a>
-            <a href="registro.html"><button class="menubut sombrabutt">Registrarse</button></a>
-            <a href="login.html"><button class="menubut sombrabutt">Iniciar Sesión</button></a>
-            </nav>
-        </div>
-        
-        <div class="div_artinc">
-            <article>
-                <h3 class="texto">Beneficios de la Aplicación</h3>
-                <p class="texto"> Esta app busca la flexibilidad de comunicación entre el <strong>Guarda de Seguridad</strong>
-                y el usuario del condominio con la utilización de un calendario para generar eventos. Estos eventos son las notificaciones
-                que va a recibir el Guarda. 
-                </p>
-            </article>
-        </div>
-	</body>
 
-	
-	</html>
+<head>
+    <meta charset="utf-8">
+    <title>Inicio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <link href="inicioCSS.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navMain" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#"><img src="edificio.png"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Condominios</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Iniciar Sesión</a></li>
+                    <li><a href="#">Registrarse</a></li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div class="container" id="contenedorInicio">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p><strong>¿Qué es NoteForAGuard?</strong><br>
+NoteForAGuard es una aplicación que se enfoca en una comunicación rápida y ágil entre usuarios. 
+Esta comunicación será disponible para aquellos usuarios que residan en condominios con vigilancia las veinticuatro horas del día. 
+Para muchos arrendatarios es difícil y tedioso el hecho de tener que llamar cada vez al guarda de seguridad para que deje el paso libre a visitas. 
+En este punto se enfoca NoteForAGuard, gracias este medio se facilita la posibilidad para el arrendatario de comunicarle al vigilante mediante una notificación 
+la llegada de una visita, un evento, entre otros aspectos del que este mismo deba ser informado.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+
+</html>
