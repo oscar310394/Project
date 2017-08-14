@@ -1,131 +1,41 @@
-#imagenfondo
-{
-    background-image: url("ny.jpg");
-    background-size: 100% auto;
-}
-
-.div_datos
-{
+  body {
+    padding-top: 15px;
+    font-size: 12px
+  }
+  .main {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .login-or {
+    position: relative;
+    font-size: 18px;
+    color: #aaa;
     margin-top: 10px;
-    height: 180px;
-}
-
-.lblinicio
-{
-    margin-bottom: 3px;
-}
-
-.form_login
-{
+            margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .span-or {
     display: block;
-    width: 30%;
-    height: 500px;
-    margin: auto;
-    margin-top: 180px;
-    background-color:rgba(255,255,255,0.6);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    padding: 10px;
-    border-radius: 2px;
-}
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    margin-left: -25px;
+    background-color: #fff;
+    width: 50px;
+    text-align: center;
+  }
+  .hr-or {
+    background-color: #cdcdcd;
+    height: 1px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  h3 {
+    text-align: center;
+    line-height: 300%;
+  }
 
-#div_titulosesion
-{
-    width: 100%;
-    height: 65px;
-    border-bottom: 1px solid black;
-}
-
-input.borderinp:focus
-{
-    outline-width: 0;
-    border: 2px solid black;
-}
-
-.input_login
-{
-    width: 100%;
-    box-sizing: border-box;
-    border: 2px solid gray;
-    border-radius: 2px;
-    font-size: 18px;
-    background-color: white;
-    background-image: url("email.png");
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-}
-
-#fotopass
-{
-    background-image: url("password.png");
-}
-
-a:link
-{
-    text-decoration: none;
-    float: right;
-}
-
-#sombrabutt:hover
-{
-    background-color: white;
-}
-
-.div_buttaceptar
-{
-    width: 100%;
-    height: 33px;
-    background:rgba(0,0,0,0.8);
-    border-radius: 2px;
-    margin:auto;
-}
-
-.buttonaceptar
-{
-    padding: 6px;
-    font-size: 18px;
-    border: none;
-    border-radius: 2px;
-    width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    background: rgba(245,245,245,0.4);
-    color: black;
-    margin-bottom: 0px;
-    outline-color: black;
-}
-
-.buttonsesion{
-    width:40px; 
-    height:40px; 
-    border: 0;
-    background-size: 100%;
-    background-size: 40px auto; 
-    background-image: url("google.png");
-    transform: translateY(10px);
-}
-
-#fotofacebook
-{
-    background-image: url("facebook.png");
-}
-
-a
-{
-    transform: translateY(25px);
-}
-
-a:link
-{
-    color: dodgerblue;
-}
-
-a:visited
-{
-    color: brown;
-}
-
-a:hover
-{
-    color:forestgreen;
-}
+  .container{
+      margin-top: 7rem;
+  }

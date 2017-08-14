@@ -2,9 +2,14 @@ p, ul li{
     font-size: 1.65rem;
 }
 
-
-
 #contenedorInicio{
     margin-top: 55px;
 }
 
+h2{
+    text-align: center;
+}
+
+ul.carousel{
+    list-style-type: none;
+}

@@ -1,46 +1,77 @@
 <!DOCTYPE html>
-        <head>
-            <meta charset="utf-8">
-            <title>Iniciar Sesión</title>
-            <link href="loginCSS.css" rel="stylesheet" type="text/css" >
-        </head>
 
-        <body id="imagenfondo">
-           
-            
-                <form class="form_login">
+<head>
 
-                <div id="div_titulosesion">
-                    <h1>Iniciar Sesión</h1>
+    <title>Inicio de Sesión</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="loginCSS.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="main">
+
+                <h3>Iniciar Sesión o <a href="#">Registrarse</a></h3>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <a href="#" class="btn btn-lg btn-primary btn-block">Facebook</a>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <a href="#" class="btn btn-lg btn-danger btn-block">Google+</a>
+                    </div>
+                </div>
+                <div class="login-or">
+                    <hr class="hr-or">
+                    <span class="span-or">O</span>
                 </div>
 
-                <div class="div_datos">
-                    <label >Correo Electrónico</label>
-                    <input type="email" class="input_login borderinp"/>
-                    <label >Contraseña</label>
-                    <input type="password" class="input_login borderinp" id="fotopass"/>             
-                </div>
-
-                <div class="div_buttaceptar">
-                    <input type="button" class="buttonaceptar" id="sombrabutt" value="Aceptar" onclick="location.href='perfil.html';"/>
-                    <a href="archivo.html"> Olvidó su contraseña? </a>
-                </div>
-
-                <div class="div_login">
-                    <label>Regístrese con:</label>
-                    <button type="submit" class="buttonsesion">
-                    </button>
-                    <button type="submit" class="buttonsesion" id="fotofacebook">   
-                    </button>  
-                </div>
-
-                <div class="div_login">
-                <a href="registro.html"> Regístrese</a>
-                </div>
+                <form role="form">
+                    <div class="form-group">
+                        <label for="userName">Usuario</label>
+                        <input type="text" class="form-control" id="userName">
+                    </div>
+                    <div class="form-group">
+                        <a class="pull-right" href="#">Olvidó la contraseña?</a>
+                        <label for="inputPassword">Contraseña</label>
+                        <input type="password" class="form-control" id="inputPassword">
+                    </div>
+                    <div class="checkbox pull-right">
+                        <label><input type="checkbox">Mantener Sesión Abierta</label>
+                    </div>
+                    <button type="submit" class="btn btn-default">Aceptar</button>
                 </form>
-            
-        </body>
 
-    
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
 
 </html>
