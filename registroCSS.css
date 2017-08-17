@@ -1,10 +1,14 @@
 body{
-    background-color: #525252;
+    background-color: #e59400;
+}
+
+.panel-default>.panel-heading{
+	background-color: #F8F8F8;
 }
 
 .centered-form .panel{
-	background: rgba(255, 255, 255, 0.8);
-	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+	background: rgba(248, 248, 248, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.2) 20px 20px 20px;
 }
 
 .container{
@@ -23,10 +27,24 @@ body{
 
 .panel{
 	height: 350px;
-	width: 450px;
 }
 
 .formulario{
 	margin-top: 30px;
 	height: 250px;
 }
+
+.panel-title{
+	color: #4CB493;
+}
+
+.form-control:focus{
+	border-color: #D2691E;
+}
+
+.centered-form .panel{
+	-webkit-box-shadow: 11px 13px 37px -16px rgba(0,0,0,0.7);
+	-moz-box-shadow: 11px 13px 37px -16px rgba(0,0,0,0.7);
+	box-shadow: 11px 13px 37px -16px rgba(0,0,0,0.7);
+}
+

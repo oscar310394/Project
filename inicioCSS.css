@@ -1,5 +1,14 @@
+body {
+  background-color: #e59400;
+}
+
 p, ul li{
     font-size: 1.65rem;
+    color: white;
+}
+
+.navbar-default{
+    border-radius: 0px;
 }
 
 #contenedorInicio{
@@ -13,3 +22,45 @@ h2{
 ul.carousel{
     list-style-type: none;
 }
+
+.container-fluid{
+    background-color: #F0F0F0;
+}
+
+div.panel-body{
+    color: black;
+}
+
+.navbar-default .navbar-nav>li>a{
+    color: black;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+color: #4CB493;
+}
+
+.panel{
+    margin-bottom: 0px;
+    background: rgba(248, 248, 248, 0.8);
+    -webkit-box-shadow: 11px 13px 37px -16px rgba(0,0,0,0.7);
+	-moz-box-shadow: 11px 13px 37px -16px rgba(0,0,0,0.7);
+	box-shadow: 11px 13px 37px -16px rgba(0,0,0,0.7);
+}
+
+.navbar-default .navbar-brand{
+    color: #4CB493;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
+    color:#4CB493;
+}
+
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #4CB493;
+}
+
+.navbar-default .navbar-toggle:focus{
+    background-color: #D3D3D3;
+}
+
