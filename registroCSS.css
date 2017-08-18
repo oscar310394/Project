@@ -11,6 +11,12 @@ body{
 	box-shadow: rgba(0, 0, 0, 0.2) 20px 20px 20px;
 }
 
+.input-sm{
+  font-size: 14px;
+}
+
+
+
 .container{
 	margin-top: 100px;
 }
@@ -40,6 +46,8 @@ body{
 
 .form-control:focus{
 	border-color: #D2691E;
+	-webkit-box-shadow: unset;
+	box-shadow: unset;
 }
 
 .centered-form .panel{

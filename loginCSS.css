@@ -1,41 +1,94 @@
-  body {
-    padding-top: 15px;
-    font-size: 12px
-  }
-  .main {
-    max-width: 320px;
-    margin: 0 auto;
-  }
-  .login-or {
-    position: relative;
-    font-size: 18px;
-    color: #aaa;
-    margin-top: 10px;
-            margin-bottom: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .span-or {
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: -2px;
-    margin-left: -25px;
-    background-color: #fff;
-    width: 50px;
-    text-align: center;
-  }
-  .hr-or {
-    background-color: #cdcdcd;
-    height: 1px;
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-  }
-  h3 {
-    text-align: center;
-    line-height: 300%;
-  }
+body {
+    background-color: #e59400;
+}
 
-  .container{
-      margin-top: 7rem;
-  }
+.h4, h4{
+  font-size: 20px;
+  color: #4CB493;
+}
+
+#loginbox {
+    margin-top: 30px;
+}
+
+#loginbox > div:first-child {        
+    background: rgba(248, 248, 248, 0.8);  
+    background: rgba(248, 248, 248, 0.8);
+	  box-shadow: rgba(0, 0, 0, 0.2) 20px 20px 20px;
+}
+
+.iconmelon {
+    display: block;
+    margin: auto;
+}
+
+
+.panel-default>.panel-heading{
+  background-color: #F8F8F8;
+}
+
+.btn{
+	background-color: #003070;
+	color: white;
+	margin-top: 15px;
+}
+
+.btn:hover{
+	color:white;
+}
+
+#form > div {
+    margin-bottom: 25px;
+}
+
+#form > div:last-child {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.panel {    
+    background-color: transparent;
+}
+
+.panel-body {
+    padding-top: 30px;
+    background-color: rgba(2555,255,255,.3);
+}
+
+#particles {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;                        
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;
+}
+
+.iconmelon,
+.im {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: block;
+  fill: #525151;
+}
+
+.iconmelon:after,
+.im:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.form-control:focus{
+	border-color: #D2691E;
+	-webkit-box-shadow: unset;
+	box-shadow: unset;
+}

@@ -1,149 +1,236 @@
 <!DOCTYPE html>
-	<head>
-		<meta charset="utf-8">
-		<title>Condominios</title>
-		<link href="vercondominioCSS.css" rel="stylesheet" type="text/css">
-	</head>
-	    
-	<body id="imagenfondo">
-        
-	    <div class="div_inicio">
-            <nav>
-            <a href="inicio.html"><button class="menubut sombrabutt">Inicio</button></a>
-            <a href="vercondominio.html"><button class="menubut sombrabutt">Condominios</button></a>
-            <a href="registro.html"><button class="menubut sombrabutt">Registrarse</button></a>
-            <a href="login.html"><button class="menubut sombrabutt">Iniciar Sesión</button></a>
-            </nav>
-        </div>
 
-        <div class="div_filtros">
-            <ul>
-            <li>
-            <label class="filtros">País:</label>
-            <select class="filtros acomodarfiltros">
-            <option value="pais">Costa Rica</option> 
-            </select>
-            </li>
-            
-            <li>
-            <label class="filtros">Provincia:</label>
-            <select class="filtros acomodarfiltros">
-            <option value="provincia">Alajuela</option> 
-            </select>
-            </li>
-            
-            <li>
-            <label class="filtros">Cantón:</label>
-            <select class="filtros acomodarfiltros">
-            <option value="canton">San Carlos</option> 
-            </select>
-            </li>
-            
-            <li>
-            <label class="filtros">Distrito:</label>
-            <select class="filtros acomodarfiltros">
-            <option value="distrito">Quesada</option> 
-            </select>
-            </li>
-            
-            <li>
-            <label class="filtros">Precio:</label>
-            <select class="filtros acomodarfiltros">
-            <option value="precio">$200-$350</option> 
-            </select>
-            </li>
-            </ul>
+<head>
 
-            <div class="div_buttfil sombrabutt">
-            <input id="buttonfiltro" type="button" value="Buscar"/>
+    <title>Condominios</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="vercondominioCSS.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navMain" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#"><img src="edificio.png"></a>
             </div>
-        </div>    
 
-        <div id="main">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Condominios</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Iniciar Sesión</a></li>
+                    <li><a href="#">Registrarse</a></li>
 
-            <section class="posts">
-                <article>
-                    <img src="condo1.jpg">
-                    <div class="div_info">
-                    <ul > 
-                    <li><label class="lbl"><strong>País:</strong>Costa Rica</label></li>
-                    <li><label class="lbl"><strong>Provincia:</strong>Alajuela</label></li>
-                    <li><label class="lbl"><strong>Cantón:</strong>San Carlos</label></li>
-                    <li><label class="lbl"><strong>Distrito:</strong>Quesada</label></li>
-                    <li><label class="lbl"><strong>Precio:</strong>300$</label></li>
-                    <li><label class="lbl"><strong>Teléfono:</strong>0000-0000</label></li>
-                    <li><label class="lbl"><strong>Descripción:</strong>Este edificio se encuentra céntrico, tiene guarda de seguridad y se permiten mascotas.</label></li>
-                    </ul>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-md-offset-3 col-lg-offset-0">
+                <div class="well">
+                    <h3 align="center">Buscar Condominio</h3>
+
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="provincia" class="control-label">Provincia</label>
+                            <select class="form-control" name="" id="provincia">
+                                <option value="">Any</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="canton" class="control-label">Cantón</label>
+                            <select class="form-control" name="" id="canton">
+                                <option value="">Any</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="distrito" class="control-label">Distrito</label>
+                            <select class="form-control" name="" id="distrito">
+                                <option value="">Any</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pricefrom" class="control-label">Precio Mínimo</label>
+                            <div class="input-group">
+                                <div class="input-group-addon" id="basic-addon1">$</div>
+                                <input type="text" class="form-control" id="pricefrom" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="priceto" class="control-label">Precio Máximo</label>
+                            <div class="input-group">
+                                <div class="input-group-addon" id="basic-addon2">$</div>
+                                <input type="text" class="form-control" id="priceto" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <p class="text-center"><a href="#" class="btn btn-danger glyphicon glyphicon-search" role="button"></a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="container">
+                <div class="row ">
+                    <br>
+                    <br>
+                    <div class="col-lg-12">
+                        <div>
+
+                            <div class="col-md-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-responsive" src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="https://pbs.twimg.com/profile_images/711000557742395396/jzm8hqwW.jpg">
+
+                                        <h2 class="hvr-underline-from-center">Rod<span>Digital / Design Consultant</span></h2>
+                                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                            incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-responsive" src="https://images.unsplash.com/photo-1451188502541-13943edb6acb?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="https://pbs.twimg.com/profile_images/711000557742395396/jzm8hqwW.jpg">
+
+                                        <h2 class="hvr-underline-from-center">Adam<span>Developer</span></h2>
+                                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                            incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-responsive" src="https://images.unsplash.com/photo-1447877085163-3cce903855cd?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="https://pbs.twimg.com/profile_images/711000557742395396/jzm8hqwW.jpg">
+
+                                        <h2 class="hvr-underline-from-center">Mike Young<span>Web Designer</span></h2>
+                                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                            incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-responsive" src="https://images.unsplash.com/photo-1447877085163-3cce903855cd?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="https://pbs.twimg.com/profile_images/711000557742395396/jzm8hqwW.jpg">
+
+                                        <h2 class="hvr-underline-from-center">Mike Young<span>Web Designer</span></h2>
+                                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                            incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-responsive" src="https://images.unsplash.com/photo-1447877085163-3cce903855cd?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="https://pbs.twimg.com/profile_images/711000557742395396/jzm8hqwW.jpg">
+
+                                        <h2 class="hvr-underline-from-center">Mike Young<span>Web Designer</span></h2>
+                                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                            incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-responsive" src="https://images.unsplash.com/photo-1447877085163-3cce903855cd?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="https://pbs.twimg.com/profile_images/711000557742395396/jzm8hqwW.jpg">
+
+                                        <h2 class="hvr-underline-from-center">Mike Young<span>Web Designer</span></h2>
+                                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                            incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="moveropcion">
-                    <a href="pagina.html" class="vermas ident">Ver Más</a>
-                    </div>
-                </article>
-                
-                <article>
-                    <img src="condo2.jpg">
-                    <div class="div_info">
-                    <ul > 
-                    <li><label class="lbl"><strong>País:</strong>Costa Rica</label></li>
-                    <li><label class="lbl"><strong>Provincia:</strong>San José</label></li>
-                    <li><label class="lbl"><strong>Cantón:</strong>San José</label></li>
-                    <li><label class="lbl"><strong>Distrito:</strong>Uruca</label></li>
-                    <li><label class="lbl"><strong>Precio:</strong>275$</label></li>
-                    <li><label class="lbl"><strong>Teléfono:</strong>0000-0000</label></li>
-                    <li><label class="lbl"><strong>Descripción:</strong>Tiene servicios cercas, como supermercados, restaurantes y una gasolinera.</label></li>
-                    </ul>
-                    </div>
-                    <div class="moveropcion">
-                    <a href="pagina.html" class="vermas ident">Ver Más</a>
-                    </div>
-                </article>
-
-                 <article>
-                    <img src="condo3.jpg">
-                    <div class="div_info">
-                    <ul > 
-                    <li><label class="lbl"><strong>País:</strong>Costa Rica</label></li>
-                    <li><label class="lbl"><strong>Provincia:</strong>San José</label></li>
-                    <li><label class="lbl"><strong>Cantón:</strong>Escazú</label></li>
-                    <li><label class="lbl"><strong>Distrito:</strong>San Rafael</label></li>
-                    <li><label class="lbl"><strong>Precio:</strong>500$</label></li>
-                    <li><label class="lbl"><strong>Teléfono:</strong>0000-0000</label></li>
-                    <li><label class="lbl"><strong>Descripción:</strong>Seguridad las 24h del día. Areas comunes como piscina, rancho y una cancha de tennis.</label></li>
-                    </ul>
-                    </div>
-                    <div class="moveropcion">
-                    <a href="pagina.html" class="vermas ident">Ver Más</a>
-                    </div>
-                </article>
-                <article>
-                    <img src="condo4.png">
-                    <div class="div_info">
-                    <ul > 
-                    <li><label class="lbl"><strong>País:</strong>Costa Rica</label></li>
-                    <li><label class="lbl"><strong>Provincia:</strong>San José/label></li>
-                    <li><label class="lbl"><strong>Cantón:</strong>Santa Ana</label></li>
-                    <li><label class="lbl"><strong>Distrito:</strong>Santa Ana</label></li>
-                    <li><label class="lbl"><strong>Precio:</strong>450$</label></li>
-                    <li><label class="lbl"><strong>Teléfono:</strong>0000-0000</label></li>
-                    <li><label class="lbl"><strong>Descripción:</strong>Lugar alejado pero muy tranquilo para vivir.</label></li>
-                    </ul>
-                    </div>
-                    <div class="moveropcion">
-                    <a href="pagina.html" class="vermas ident">Ver Más</a>
-                    </div>
-                </article>
-
-            </section>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
 
 
-
-        
-
-
-
-	</body>
-	
-	</html>
+</html>
