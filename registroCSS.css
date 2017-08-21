@@ -15,8 +15,6 @@ body{
   font-size: 14px;
 }
 
-
-
 .container{
 	margin-top: 100px;
 }
@@ -54,5 +52,42 @@ body{
 	-webkit-box-shadow: 11px 13px 37px -16px rgba(0,0,0,0.7);
 	-moz-box-shadow: 11px 13px 37px -16px rgba(0,0,0,0.7);
 	box-shadow: 11px 13px 37px -16px rgba(0,0,0,0.7);
+}
+
+.navbar-default .navbar-nav>li>a{
+    color: black;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+    color: #4CB493;
+}
+
+.navbar-default .navbar-brand{
+    color: #4CB493;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
+    color:#4CB493;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #4CB493;
+}
+
+.navbar-default .navbar-toggle:focus{
+    background-color: #D3D3D3;
+}
+
+p, ul li{
+    font-size: 1.65rem;
+    color: white;
+}
+
+.navbar-default{
+    border-radius: 0px;
+}
+
+.container-fluid{
+    background-color: #F0F0F0;
 }
 

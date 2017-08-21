@@ -2,7 +2,7 @@
 
 <head>
 
-    <title></title>
+    <title>Lista Guardas</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,7 +12,7 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
         crossorigin="anonymous">
-    <link href="registrar_arrendatarioCSS.css" rel="stylesheet" type="text/css">
+    <link href="lista_guardasCSS.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -45,55 +45,24 @@
         </div>
     </nav>
     <div class="main">
-
-        <div class="container">
-            <div class="row centered-form">
-                <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Registrar Arrendatario</h3>
-                        </div>
-                        <div class="panel-body">
-                            <form class="formulario" role="form">
-
-                                <div class="form-group">
-                                    <input type="text" name="apartamento" id="apartamento" class="form-control input-sm" placeholder="Número de Apartamento">
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="text" name="nombre" id="nombre" class="form-control input-sm" placeholder="Nombre">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="apellido" id="apellido" class="form-control input-sm" placeholder="Apellido">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Correo Electrónico">
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="tel" name="tel" id="tel" class="form-control input-sm" placeholder="Teléfono">
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Contraseña">
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Repetir Contraseña">
-                                </div>
-
-
-                                <input type="button" value="Aceptar" class="btn btn-block" onclick="saveUser();">
-
-                            </form>
-                        </div>
-                    </div>
+            <div class="table-responsive">
+                    <table class="table table-hover text-center">
+                        <thead>
+                            <tr class="active">
+                                <th class="text-center">Nombre</th>
+                                <th class="text-center">Apellido</th>
+                                <th class="text-center">Email</th>
+                                <th class="text-center">Teléfono</th>
+                                <th class="text-center">Contraseña</th>
+                            </tr>
+                        </thead>
+                        <tbody id="guards_table">
+        
+                        </tbody>
+                    </table>
+        
                 </div>
-            </div>
-        </div>
-
     </div>
-
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -101,8 +70,8 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="registrar_arrendatarioJS.js"></script>
-    <script type="text/javascript" src="logicaJS.js"></script>
+    <script type="text/javascript" src="lista_guardasJS.js"></script>
+    <script type="text/javascript" src="logicaJS.js"> </script>
 </body>
 
 
