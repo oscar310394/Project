@@ -301,4 +301,15 @@ function userLogueado(user) {
 }
 
 
+function closeLogIn(){
+    sessionStorage.removeItem("logIn");
+    location.href = "inicio.html";
+}
+
+function deleteUpdate(){
+    sessionStorage.removeItem("idUserToUpdate");
+    sessionStorage.removeItem("idGuardToUpdate");
+}
+
+
 

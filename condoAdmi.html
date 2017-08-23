@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Condominios</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <link href="condoAdmiCSS.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse sidebar" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+                <span class="navbar-brand">NoteForAGuard</span>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="calendario.html" onclick="deleteUpdate();">Calendario<span class="pull-right hidden-xs showopacity glyphicon glyphicon-calendar iconos"></span></a></li>
+                    <li><a href="#" onclick="deleteUpdate();">Lista Condominios<span class="pull-right hidden-xs showopacity glyphicon glyphicon-home iconos"></span></a></li>
+                    <li><a href="#" onclick="deleteUpdate();">Agregar Condominio<span class="pull-right hidden-xs showopacity glyphicon glyphicon-plus iconos"></span></a></li>
+                    <li><a href="lista_arrendatarios.html" onclick="deleteUpdate();">Lista Arrendatarios<span class="pull-right hidden-xs showopacity glyphicon glyphicon-user iconos"></span></a></li>
+                    <li><a href="registrar_arrendatario.html" onclick="deleteUpdate();">Agregar Arrendatario<span class="pull-right hidden-xs showopacity glyphicon glyphicon-plus iconos"></span></a></li>
+                    <li><a href="lista_guardas.html" onclick="deleteUpdate();">Lista Guardas<span class="pull-right hidden-xs showopacity glyphicon glyphicon-user iconos"></span></a></li>
+                    <li><a href="agregar_guarda.html" onclick="deleteUpdate();">Agregar Guarda<span class="pull-right hidden-xs showopacity glyphicon glyphicon-plus iconos"></span></a></li>
+                    <li><a href="#" onclick="closeLogIn(); deleteUpdate();">Cerrar Sesión<span class="pull-right hidden-xs showopacity glyphicon glyphicon-log-out iconos"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-md-offset-3 col-lg-offset-0">
+                    <div class="well">
+                        <h3 align="center">Buscar Condominio</h3>
+
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="provincia" class="control-label">Provincia</label>
+                                <select class="form-control" name="" id="provincia">
+                                            <option value="">Any</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                        </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="canton" class="control-label">Cantón</label>
+                                <select class="form-control" name="" id="canton">
+                                            <option value="">Any</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                        </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="distrito" class="control-label">Distrito</label>
+                                <select class="form-control" name="" id="distrito">
+                                            <option value="">Any</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                        </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="pricefrom" class="control-label">Precio Mínimo</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon" id="basic-addon1">$</div>
+                                    <input type="text" class="form-control" id="pricefrom" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="priceto" class="control-label">Precio Máximo</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon" id="basic-addon2">$</div>
+                                    <input type="text" class="form-control" id="priceto" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                            <p class="text-center"><a href="#" class="btn btn-primary glyphicon glyphicon-search" role="button"></a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="profile-card text-center">
+
+                        <img class="img-responsive" src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                        <div class="profile-info">
+
+                            <img class="profile-pic" src="https://pbs.twimg.com/profile_images/711000557742395396/jzm8hqwW.jpg">
+
+                            <h2 class="hvr-underline-from-center">Azul<span>Condominio</span></h2>
+                            <div class="span3">
+                                <span class="span3">Provincia:</span>
+                                <label> San José </label>
+                                <span class="span3">Cantón:</span>
+                                <label> Escazú </label>
+                                <span class="span3">Distrito:</span>
+                                <label> Escazú </label>
+                                <span class="span3">Precio:</span>
+                                <label> $500 </label>
+                                <span class="span3">Teléfono:</span>
+                                <label> 2222-4896 </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="profile-card text-center">
+
+                        <img class="img-responsive" src="https://images.unsplash.com/photo-1451188502541-13943edb6acb?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                        <div class="profile-info">
+
+                            <img class="profile-pic" src="https://pbs.twimg.com/profile_images/711000557742395396/jzm8hqwW.jpg">
+
+                            <h2 class="hvr-underline-from-center">Florales<span>Condominio</span></h2>
+                            <div class="span3">
+                                <span class="span3">Provincia:</span>
+                                <label> Alajuela </label>
+                                <span class="span3">Cantón:</span>
+                                <label> San Carlos </label>
+                                <span class="span3">Distrito:</span>
+                                <label> Quesada </label>
+                                <span class="span3">Precio:</span>
+                                <label> $350 </label>
+                                <span class="span3">Teléfono:</span>
+                                <label> 2460-4878 </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="profile-card text-center">
+
+                        <img class="img-responsive" src="https://images.unsplash.com/photo-1447877085163-3cce903855cd?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                        <div class="profile-info">
+
+                            <img class="profile-pic" src="https://pbs.twimg.com/profile_images/711000557742395396/jzm8hqwW.jpg">
+
+                            <h2 class="hvr-underline-from-center">Azulas<span>Condominio</span></h2>
+                            <div class="span3">
+                                <span class="span3">Provincia:</span>
+                                <label> San José </label>
+                                <span class="span3">Cantón:</span>
+                                <label> Santa Ana </label>
+                                <span class="span3">Distrito:</span>
+                                <label> Santa Ana </label>
+                                <span class="span3">Precio:</span>
+                                <label> $800 </label>
+                                <span class="span3">Teléfono:</span>
+                                <label> 2287-9698 </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="profile-card text-center">
+
+                        <img class="img-responsive" src="https://images.unsplash.com/photo-1447877085163-3cce903855cd?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                        <div class="profile-info">
+
+                            <img class="profile-pic" src="https://pbs.twimg.com/profile_images/711000557742395396/jzm8hqwW.jpg">
+
+                            <h2 class="hvr-underline-from-center">Loreal<span>Condominio</span></h2>
+                            <div class="span3">
+                                <span class="span3">Provincia:</span>
+                                <label> San José </label>
+                                <span class="span3">Cantón:</span>
+                                <label> Curridabat </label>
+                                <span class="span3">Distrito:</span>
+                                <label> Curridabat </label>
+                                <span class="span3">Precio:</span>
+                                <label> $500 </label>
+                                <span class="span3">Teléfono:</span>
+                                <label> 2269-7845 </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="profile-card text-center">
+
+                        <img class="img-responsive" src="https://images.unsplash.com/photo-1451188502541-13943edb6acb?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                        <div class="profile-info">
+
+                            <img class="profile-pic" src="https://pbs.twimg.com/profile_images/711000557742395396/jzm8hqwW.jpg">
+
+                            <h2 class="hvr-underline-from-center">Felicio<span>Condominio</span></h2>
+                            <div class="span3">
+                                <span class="span3">Provincia:</span>
+                                <label> San José </label>
+                                <span class="span3">Cantón:</span>
+                                <label> Montes de Oca </label>
+                                <span class="span3">Distrito:</span>
+                                <label> San Pedro </label>
+                                <span class="span3">Precio:</span>
+                                <label> $735 </label>
+                                <span class="span3">Teléfono:</span>
+                                <label> 2287-9632 </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="profile-card text-center">
+
+                        <img class="img-responsive" src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                        <div class="profile-info">
+
+                            <img class="profile-pic" src="https://pbs.twimg.com/profile_images/711000557742395396/jzm8hqwW.jpg">
+
+                            <h2 class="hvr-underline-from-center">Zeta<span>Condominio</span></h2>
+                            <div class="span3">
+                                <span class="span3 ">Provincia:</span>
+                                <label> Cartago </label>
+                                <span class="span3 ">Cantón:</span>
+                                <label> Oreamuno </label>
+                                <span class="span3 ">Distrito:</span>
+                                <label> Santa Rosa </label>
+                                <span class="span3 ">Precio:</span>
+                                <label> $475 </label>
+                                <span class="span3 ">Teléfono:</span>
+                                <label> 2785-9698 </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="condoAdmiJS.js"></script>
+    <script type="text/javascript" src="logicaJS.js"></script>
+</body>
+
+
+</html>

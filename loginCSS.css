@@ -133,3 +133,8 @@ p, ul li{
 select{
     padding: 5px;
 }
+
+.btn.focus, .btn:focus, .btn:hover {
+    color: white; 
+    text-decoration: none;
+}

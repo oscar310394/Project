@@ -91,3 +91,8 @@ p, ul li{
     background-color: #F0F0F0;
 }
 
+.btn.focus, .btn:focus, .btn:hover {
+    color: white;
+    text-decoration: none;
+}
+

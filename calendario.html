@@ -2,7 +2,7 @@
 
 <head>
 
-    <title>Lista Guardas</title>
+    <title>Calendario</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,7 +12,7 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
         crossorigin="anonymous">
-    <link href="lista_guardasCSS.css" rel="stylesheet" type="text/css">
+    <link href="calendarioCSS.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -32,41 +32,20 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="calendario.html" onclick="deleteUpdate();" >Calendario<span class="pull-right hidden-xs showopacity glyphicon glyphicon-calendar iconos"></span></a></li>
+                    <li><a href="calendario.html" onclick="deleteUpdate();">Calendario<span class="pull-right hidden-xs showopacity glyphicon glyphicon-calendar iconos"></span></a></li>
                     <li><a href="condoAdmi.html" onclick="deleteUpdate();">Lista Condominios<span class="pull-right hidden-xs showopacity glyphicon glyphicon-home iconos"></span></a></li>
                     <li><a href="#" onclick="deleteUpdate();">Agregar Condominio<span class="pull-right hidden-xs showopacity glyphicon glyphicon-plus iconos"></span></a></li>
                     <li><a href="lista_arrendatarios.html" onclick="deleteUpdate();">Lista Arrendatarios<span class="pull-right hidden-xs showopacity glyphicon glyphicon-user iconos"></span></a></li>
                     <li><a href="registrar_arrendatario.html" onclick="deleteUpdate();">Agregar Arrendatario<span class="pull-right hidden-xs showopacity glyphicon glyphicon-plus iconos"></span></a></li>
                     <li><a href="lista_guardas.html" onclick="deleteUpdate();">Lista Guardas<span class="pull-right hidden-xs showopacity glyphicon glyphicon-user iconos"></span></a></li>
                     <li><a href="agregar_guarda.html" onclick="deleteUpdate();">Agregar Guarda<span class="pull-right hidden-xs showopacity glyphicon glyphicon-plus iconos"></span></a></li>
-                    <li><a href="#" onclick="closeLogIn(); deleteUpdate();">Cerrar Sesión<span class="pull-right hidden-xs showopacity glyphicon glyphicon-log-out iconos"></span></a></li>
+                    <li><a href="#" onclick="closeLogIn(); deleteUpdate();" >Cerrar Sesión<span class="pull-right hidden-xs showopacity glyphicon glyphicon-log-out iconos"></span></a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="main">
-        <div class="span6">
-            <h3 class="muted">Lista de Guardas</h3>
-        </div>
-        <div class="table-responsive">
-            <table class="table table-hover text-center">
-                <thead>
-                    <tr class="active">
-                        <th class="text-center">Nombre</th>
-                        <th class="text-center">Apellido</th>
-                        <th class="text-center">Email</th>
-                        <th class="text-center">Teléfono</th>
-                        <th class="text-center">Contraseña</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody id="guards_table">
-
-                </tbody>
-            </table>
-
-        </div>
+        <!-- Content Here -->
     </div>
 
 
@@ -75,10 +54,8 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="lista_guardasJS.js"></script>
-    <script type="text/javascript" src="logicaJS.js">
-
-    </script>
+    <script type="text/javascript" src="calendarioJS.js"></script>
+    <script type="text/javascript" src="logicaJS.js"></script>
 </body>
 
 

@@ -231,4 +231,7 @@
     }
 }
 
-
+.btn.focus, .btn:focus, .btn:hover {
+    color: white;
+    text-decoration: none;
+}
