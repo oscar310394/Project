@@ -34,7 +34,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="calendario.html" onclick="deleteUpdate();">Calendario<span class="pull-right hidden-xs showopacity glyphicon glyphicon-calendar iconos"></span></a></li>
                     <li><a href="condoAdmi.html" onclick="deleteUpdate();">Lista Condominios<span class="pull-right hidden-xs showopacity glyphicon glyphicon-home iconos"></span></a></li>
-                    <li><a href="#" onclick="deleteUpdate();">Agregar Condominio<span class="pull-right hidden-xs showopacity glyphicon glyphicon-plus iconos"></span></a></li>
+                    <li><a href="agregarCondominio.html" onclick="deleteUpdate();">Agregar Condominio<span class="pull-right hidden-xs showopacity glyphicon glyphicon-plus iconos"></span></a></li>
                     <li><a href="lista_arrendatarios.html" onclick="deleteUpdate();">Lista Arrendatarios<span class="pull-right hidden-xs showopacity glyphicon glyphicon-user iconos"></span></a></li>
                     <li><a href="registrar_arrendatario.html" onclick="deleteUpdate();">Agregar Arrendatario<span class="pull-right hidden-xs showopacity glyphicon glyphicon-plus iconos"></span></a></li>
                     <li><a href="lista_guardas.html" onclick="deleteUpdate();">Lista Guardas<span class="pull-right hidden-xs showopacity glyphicon glyphicon-user iconos"></span></a></li>
@@ -57,29 +57,29 @@
                             <form class="formulario" role="form">
 
                                 <div class="form-group">
-                                    <input type="text" name="apartamento" id="apartamento" class="form-control input-sm" placeholder="Número de Apartamento">
+                                    <input type="text" name="apartamento" id="apartamento" class="form-control input-sm required" placeholder="Número de Apartamento">
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="text" name="nombre" id="nombre" class="form-control input-sm" placeholder="Nombre">
+                                    <input type="text" name="nombre" id="nombre" class="form-control input-sm required" placeholder="Nombre">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="apellido" id="apellido" class="form-control input-sm" placeholder="Apellido">
+                                    <input type="text" name="apellido" id="apellido" class="form-control input-sm required" placeholder="Apellido">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Correo Electrónico">
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="tel" name="tel" id="tel" class="form-control input-sm" placeholder="Teléfono">
+                                    <input type="email" name="email" id="email" class="form-control input-sm required" placeholder="Correo Electrónico">
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Contraseña">
+                                    <input type="tel" name="tel" id="tel" class="form-control input-sm required" placeholder="Teléfono">
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Repetir Contraseña">
+                                    <input type="password" name="password" id="password" class="form-control input-sm required" placeholder="Contraseña">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm required" placeholder="Repetir Contraseña">
                                 </div>
 
 

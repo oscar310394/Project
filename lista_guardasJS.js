@@ -30,16 +30,14 @@ $(document).ready(function () {
 });
 
 function getGuard() {
-
     var userLog = JSON.parse(sessionStorage.getItem("logIn"));
     var idUserLog = userLog.id;
     var arrayGuard = JSON.parse(localStorage.getItem("guard"));
-
+    var table = document.getElementById("guards_table");
+    table.innerHTML = null;
     for (var index = 0; index < arrayGuard.length; index++) {
         if(arrayGuard[index].idAdmi === idUserLog){
-            var table = document.getElementById("guards_table");
             if (table != null) {
-                table.innerHTML = null;
                 tableGuard(arrayGuard[index]);
             }
         }
@@ -65,7 +63,7 @@ function deleteGuard(guardId){
         }
     }
     localStorage.setItem("guard", JSON.stringify(arrayGuard));
-    getUser();
+    getGuard();
 }
 
 function openUpdateGuard(idGuard){

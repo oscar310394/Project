@@ -54,6 +54,15 @@ function cleanFields() {
     document.getElementById("password_confirmation").value = "";
 }
 
+function cleanFieldsCondo(){
+    document.getElementById("provincia").value = "";
+    document.getElementById("canton").value = "";
+    document.getElementById("distrito").value = "";
+    document.getElementById("precio").value = "";
+    document.getElementById("tel").value = "";
+    document.getElementById("foto").value = "";
+}
+
 
 function confirmationOfLogin() {
     var email = document.getElementById("email").value;
@@ -282,6 +291,47 @@ function updateGuard1(idGuard) {
     }
 }
 
+function saveCondo() {
+    var idAdmiLogIn = 0;
+    var getCondoArrayLocal = JSON.parse(localStorage.getItem("condominium"));
+    var getAdmiLogIn = JSON.parse(sessionStorage.getItem("logIn"));
+
+    idAdmiLogIn = getAdmiLogIn.id;
+    var idCondo = getLastId("condominium");
+    var provinceCondo = document.getElementById("provincia").value;
+    var cantonCondo = document.getElementById("canton").value;
+    var districtCondo = document.getElementById("distrito").value;
+    var priceCondo = document.getElementById("precio").value;
+    var phoneCondo = document.getElementById("tel").value;
+    var photoCondo = document.getElementById("foto").value;
+
+
+    var jsonCondo = {
+        "idAdmi": idAdmiLogIn,
+        "id": idCondo,
+        "province": provinceCondo,
+        "canton": cantonCondo,
+        "district": districtCondo,
+        "price": priceCondo,
+        "phone": phoneCondo,
+        "photo":photoCondo
+    };
+
+    if (getCondoArrayLocal === null) {
+        var condoArray = [];
+        condoArray.push(jsonCondo);
+        localStorage.setItem("condominium", JSON.stringify(condoArray));
+        alert("Se guardó con éxito.");
+        cleanFieldsCondo();
+    } else {
+        getCondoArrayLocal.push(jsonCondo);
+        localStorage.setItem("condominium", JSON.stringify(getCondoArrayLocal));
+        alert("Se guardó con éxito.");
+        cleanFieldsCondo();
+    }
+
+}
+
 
 
 function getLastId(tableLocalStorage) {
@@ -301,12 +351,12 @@ function userLogueado(user) {
 }
 
 
-function closeLogIn(){
+function closeLogIn() {
     sessionStorage.removeItem("logIn");
     location.href = "inicio.html";
 }
 
-function deleteUpdate(){
+function deleteUpdate() {
     sessionStorage.removeItem("idUserToUpdate");
     sessionStorage.removeItem("idGuardToUpdate");
 }

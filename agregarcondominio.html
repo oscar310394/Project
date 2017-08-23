@@ -1,74 +1,107 @@
 <!DOCTYPE html>
-	<head>
-		<meta charset="utf-8">
-		<title>Agregar Condominio</title>
-		<link href="agregarcondominioCSS.css" rel="stylesheet" type="text/css">
-	</head>
-	
-	<body id="imagenfondo">
-        <div class="div_general">
-            <div class="div_datos">
-            <ul>
-            <li>
-            <label class="lbl">País:</label>
-            <select class="datos inmarg">
-            <option value="pais">Costa Rica</option> 
-            </select>
-            </li>
-            
-            <li>
-            <label class="lbl">Provincia:</label>
-            <select class="datos inmarg">
-            <option value="provincia">Alajuela</option> 
-            </select>
-            </li>
-            
-            <li>
-            <label class="lbl">Cantón:</label>
-            <select class="datos inmarg">
-            <option value="canton">San Carlos</option> 
-            </select>
-            </li>
-            
-            <li>
-            <label class="lbl">Distrito:</label>
-            <select class="datos inmarg">
-            <option value="distrito">Quesada</option> 
-            </select>
-            </li>
 
-            
-            <li>
-            <label class="lbl">Teléfono:</label>
-            <input type="tel" class="datos inmarg">
-            </li>
+<head>
 
-            <li>
-            <label class="lbl">Correo Electrónico:</label>
-            <input type="email" class="datos inmarg">
-            </li>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-             <li>
-            <label class="lbl">Precio:</label>
-            <input type="text" class="datos inmarg">
-            </li>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <link href="agregarCondominioCSS.css" rel="stylesheet" type="text/css">
 
-            <li>
-            <label class="lbl">Descripción:</label>
-            <textarea rows="5" cols="40" id="letra" class="datoso inmarg"></textarea>
-            </li>
+</head>
 
-            <li>
-            <input type="file" accept="image/*" class="" id="escogerarchivo">
-            </li>
-            </ul>
+<body>
 
-            <div class="div_butt">
-            <input type="submit" value="Aceptar" id="sombrabutt">
+    <nav class="navbar navbar-inverse sidebar" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+                <span class="navbar-brand">NoteForAGuard</span>
             </div>
-
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="calendario.html" onclick="deleteUpdate();">Calendario<span class="pull-right hidden-xs showopacity glyphicon glyphicon-calendar iconos"></span></a></li>
+                    <li><a href="condoAdmi.html" onclick="deleteUpdate();">Lista Condominios<span class="pull-right hidden-xs showopacity glyphicon glyphicon-home iconos"></span></a></li>
+                    <li><a href="agregarCondominio.html" onclick="deleteUpdate();">Agregar Condominio<span class="pull-right hidden-xs showopacity glyphicon glyphicon-plus iconos"></span></a></li>
+                    <li><a href="lista_arrendatarios.html" onclick="deleteUpdate();">Lista Arrendatarios<span class="pull-right hidden-xs showopacity glyphicon glyphicon-user iconos"></span></a></li>
+                    <li><a href="registrar_arrendatario.html" onclick="deleteUpdate();">Agregar Arrendatario<span class="pull-right hidden-xs showopacity glyphicon glyphicon-plus iconos"></span></a></li>
+                    <li><a href="lista_guardas.html" onclick="deleteUpdate();">Lista Guardas<span class="pull-right hidden-xs showopacity glyphicon glyphicon-user iconos"></span></a></li>
+                    <li><a href="agregar_guarda.html" onclick="deleteUpdate();">Agregar Guarda<span class="pull-right hidden-xs showopacity glyphicon glyphicon-plus iconos"></span></a></li>
+                    <li><a href="#" onclick="closeLogIn(); deleteUpdate();">Cerrar Sesión<span class="pull-right hidden-xs showopacity glyphicon glyphicon-log-out iconos"></span></a></li>
+                </ul>
             </div>
         </div>
-	</body>
-	
-	</html>
+    </nav>
+    <div class="main">
+
+        <div class="container">
+            <div class="row centered-form">
+                <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 id="titRegister" class="panel-title">Registrar Condominio</h3>
+                        </div>
+                        <div class="panel-body">
+                            <form class="formulario" role="form">
+
+                                <div class="form-group">
+                                    <input type="text" name="provincia" id="provincia" class="form-control input-sm required" placeholder="Provincia">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" name="canton" id="canton" class="form-control input-sm required" placeholder="Cantón">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" name="distrito" id="distrito" class="form-control input-sm required" placeholder="Distrito">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="email" name="precio" id="precio" class="form-control input-sm required" placeholder="Precio">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="tel" name="tel" id="tel" class="form-control input-sm required" placeholder="Teléfono">
+                                </div>
+
+                                <div class="form-group required" data-provides="fileinput">
+                                    <input id="foto" type="file">
+                                </div>
+
+
+                                <input id="btnRegister" type="button" value="Aceptar" class="btn btn-block" onclick="saveCondo();">
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="agregarCondominioJS.js"></script>
+    <script type="text/javascript" src="logicaJS.js"></script>
+</body>
+
+
+</html>

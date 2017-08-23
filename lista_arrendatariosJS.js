@@ -40,7 +40,6 @@ function getUser() {
     table.innerHTML = null;
     for (var index = 0; index < arrayUser.length; index++) {
         if (arrayUser[index].idAdmi === idUserLog) {
-            
             if (table != null) {
                 tableUser(arrayUser[index]);
             }
