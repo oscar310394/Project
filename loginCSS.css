@@ -93,7 +93,6 @@ body {
 	box-shadow: unset;
 }
 
-
 .navbar-default .navbar-nav>li>a{
     color: black;
 }
@@ -129,4 +128,8 @@ p, ul li{
 
 .container-fluid{
     background-color: #F0F0F0;
+}
+
+select{
+    padding: 5px;
 }

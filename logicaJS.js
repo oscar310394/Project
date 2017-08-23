@@ -1,19 +1,9 @@
-function charge(){
-    getUser();
-    getGuard();
-}
-charge();
-
-
 function saveAdmi() {
 
     var getAdmiArrayLocal = JSON.parse(localStorage.getItem("administrator"));
 
-    var id = 1;
-    if (getAdmiArrayLocal != null && getAdmiArrayLocal != undefined) {
-        id = getAdmiArrayLocal.length + 1;
-    }
-    var idAdmi = id;
+
+    var idAdmi = getLastId("administrator");
     var nameAdmi = document.getElementById("nombre").value;
     var lastnameAdmi = document.getElementById("apellido").value;
     var emailAdmi = document.getElementById("email").value;
@@ -29,8 +19,7 @@ function saveAdmi() {
             "lastname": lastnameAdmi,
             "email": emailAdmi,
             "phone": telAdmi,
-            "password": passAdmi,
-            "privileges": true
+            "password": passAdmi
         };
 
         if (getAdmiArrayLocal === null) {
@@ -70,34 +59,116 @@ function confirmationOfLogin() {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     var getAdmiArray = JSON.parse(localStorage.getItem("administrator"));
+    var getUserArray = JSON.parse(localStorage.getItem("user"));
+    var getGuardArray = JSON.parse(localStorage.getItem("guard"));
+    var combo = document.getElementById("combobox");
+    var valueCombo = combo.options[combo.selectedIndex].value;
+    var administrator = "administrator";
+    var guard = "guard";
+    var user = "user";
+    var contador = 0;
 
-    for (var index = 0; index < getAdmiArray.length; index++) {
-        var userEmail = getAdmiArray[index].email;
-        var userPass = getAdmiArray[index].password;
-        var userPrivileges = getAdmiArray[index].privileges;
-        if (email === userEmail && password === userPass) {
-            if (userPrivileges) {
-                location.href = "nav_usuario.html";
-            } else {
-                location.href = "user_window.html";  //QUE ABRA LA PANTALLA DE USUARIO NO LA DE ADMINISTRADOR
-            }
+    if (valueCombo === administrator) {
+        if (getAdmiArray === null) {
+            alert("No tiene privilegios de Administrador.");
         } else {
-            alert("Datos digitados inválidos.");
+
+            for (var index = 0; index < getAdmiArray.length; index++) {
+                var admiEmail = getAdmiArray[index].email;
+                var admiPass = getAdmiArray[index].password;
+                if (email === admiEmail && password === admiPass) {
+                    userLogueado(getAdmiArray[index]);
+                    location.href = "nav_usuario.html";
+                    contador = 1;
+                    return;
+                }
+            }
+            if (contador == 0) {
+                alert("Credenciales incorrectos.");
+            }
         }
-        //break;
+    }
+    if (valueCombo === guard) {
+        if (getGuardArray === null) {
+            alert("No tiene privilegios de Guarda.");
+        } else {
+            for (var index = 0; index < getGuardArray.length; index++) {
+                var guardEmail = getGuardArray[index].email;
+                var guardPass = getGuardArray[index].password;
+                if (email === guardEmail && password === guardPass) {
+                    userLogueado(getGuardArray[index]);
+                    location.href = "guard_window.html";
+                    contador = 1;
+                }
+            }
+            if (contador == 0) {
+                alert("Credenciales incorrectos.");
+            }
+        }
+    }
+    if (valueCombo === user) {
+        if (getUserArray === null) {
+            alert("No tiene privilegios de Usuario.");
+        } else {
+            for (var index = 0; index < getUserArray.length; index++) {
+                var userEmail = getUserArray[index].email;
+                var userPass = getUserArray[index].password;
+                if (email === userEmail && password === userPass) {
+                    userLogueado(getUserArray[index]);
+                    location.href = "user_window.html";
+                    contador = 1;
+                }
+            }
+            if (contador == 0) {
+                alert("Credenciales incorrectos.");
+            }
+        }
     }
 }
 
 function saveUser() {
-
-    var getUserArrayLocal = JSON.parse(localStorage.getItem("user"));
-    var getUserArrayStorage = JSON.parse(sessionStorage.getItem("user"));
-    var id = 1;
-    if (getUserArrayLocal != null && getUserArrayLocal != undefined) {
-        id = getUserArrayLocal.length + 1;
+    var idUserToUpdate = JSON.parse(sessionStorage.getItem("idUserToUpdate"));
+    if (idUserToUpdate != null && idUserToUpdate != undefined) {
+        //modificamos usuario
+        updateUser1(idUserToUpdate);
+    } else {
+        saveUser1();
     }
+}
 
-    var idUser = id;
+
+function updateUser1(idUser) {
+    var passUser = document.getElementById("password").value;
+    var passUserConf = document.getElementById("password_confirmation").value;
+    var passConfi = samePass(passUser, passUserConf);
+    if (passConfi === true) {
+        var arrayUser = JSON.parse(localStorage.getItem("user"));
+        for (var index = 0; index < arrayUser.length; index++) {
+            if (arrayUser[index].id === idUser) {
+                arrayUser[index].apartment = document.getElementById("apartamento").value;
+                arrayUser[index].name = document.getElementById("nombre").value;
+                arrayUser[index].lastname = document.getElementById("apellido").value;
+                arrayUser[index].email = document.getElementById("email").value;
+                arrayUser[index].phone = document.getElementById("tel").value;
+                arrayUser[index].password = passUser;
+                break;
+            }
+        }
+
+        localStorage.setItem("user", JSON.stringify(arrayUser));
+        sessionStorage.removeItem("idUserToUpdate");
+        location.href = "lista_arrendatarios.html";
+    }
+}
+
+
+function saveUser1() {
+    var idAdmiLogIn = 0;
+    var getUserArrayLocal = JSON.parse(localStorage.getItem("user"));
+    var getAdmiLogIn = JSON.parse(sessionStorage.getItem("logIn"));
+
+    idAdmiLogIn = getAdmiLogIn.id;
+    var idUser = getLastId("user");
     var apartmentUser = document.getElementById("apartamento").value;
     var nameUser = document.getElementById("nombre").value;
     var lastnameUser = document.getElementById("apellido").value;
@@ -109,14 +180,14 @@ function saveUser() {
     var passConfi = samePass(passUser, passUserConf);
     if (passConfi === true) {
         var jsonUser = {
-            "id": id,
+            "idAdmi": idAdmiLogIn,
+            "id": idUser,
             "apartment": apartmentUser,
             "name": nameUser,
             "lastname": lastnameUser,
             "email": emailUser,
             "phone": telUser,
             "password": passUser,
-            "privileges": false
         };
 
         if (getUserArrayLocal === null) {
@@ -136,17 +207,24 @@ function saveUser() {
     }
 }
 
-
 function saveGuard() {
-
-    var getGuardArrayLocal = JSON.parse(localStorage.getItem("guard"));
-    var getGuardArrayStorage = JSON.parse(sessionStorage.getItem("guard"));
-    var id = 1;
-    if (getGuardArrayLocal != null && getGuardArrayLocal != undefined) {
-        id = getGuardArrayLocal.length + 1;
+    var idGuardToUpdate = JSON.parse(sessionStorage.getItem("idGuardToUpdate"));
+    if (idGuardToUpdate != null && idGuardToUpdate != undefined) {
+        //modificamos usuario
+        updateGuard1(idGuardToUpdate);
+    } else {
+        saveGuard1();
     }
+}
 
-    var idGuard = id;
+
+function saveGuard1() {
+    var idAdmiLogIn = 0;
+    var getGuardArrayLocal = JSON.parse(localStorage.getItem("guard"));
+    var getAdmiLogIn = JSON.parse(sessionStorage.getItem("logIn"));
+
+    idAdmiLogIn = getAdmiLogIn.id;
+    var idGuard = getLastId("guard");
     var nameGuard = document.getElementById("nombre").value;
     var lastnameGuard = document.getElementById("apellido").value;
     var emailGuard = document.getElementById("email").value;
@@ -156,24 +234,24 @@ function saveGuard() {
 
     var passConfi = samePass(passGuard, passGuardConf);
     if (passConfi === true) {
-        var jsonUser = {
-            "id": id,
+        var jsonGuard = {
+            "idAdmi": idAdmiLogIn,
+            "id": idGuard,
             "name": nameGuard,
             "lastname": lastnameGuard,
             "email": emailGuard,
             "phone": telGuard,
             "password": passGuard,
-            "privileges": false
         };
 
         if (getGuardArrayLocal === null) {
-            var userArray = [];
-            userArray.push(jsonUser);
-            localStorage.setItem("guard", JSON.stringify(userArray));
+            var guardArray = [];
+            guardArray.push(jsonGuard);
+            localStorage.setItem("guard", JSON.stringify(guardArray));
             alert("Se guardó con éxito.");
             cleanFields();
         } else {
-            getGuardArrayLocal.push(jsonUser);
+            getGuardArrayLocal.push(jsonGuard);
             localStorage.setItem("guard", JSON.stringify(getGuardArrayLocal));
             alert("Se guardó con éxito.");
             cleanFields();
@@ -181,46 +259,46 @@ function saveGuard() {
     }
 }
 
+function updateGuard1(idGuard) {
+    var passGuard = document.getElementById("password").value;
+    var passGuardConf = document.getElementById("password_confirmation").value;
+    var passConfi = samePass(passGuard, passGuardConf);
+    if (passConfi === true) {
+        var arrayGuard = JSON.parse(localStorage.getItem("guard"));
+        for (var index = 0; index < arrayGuard.length; index++) {
+            if (arrayGuard[index].id === idGuard) {
+                arrayGuard[index].name = document.getElementById("nombre").value;
+                arrayGuard[index].lastname = document.getElementById("apellido").value;
+                arrayGuard[index].email = document.getElementById("email").value;
+                arrayGuard[index].phone = document.getElementById("tel").value;
+                arrayGuard[index].password = passGuard;
+                break;
+            }
+        }
 
-
-function getUser() {
-    var arrayUser = [];
-    if (localStorage.getItem("user")) {
-        arrayUser = JSON.parse(localStorage.getItem("user"));
+        localStorage.setItem("guard", JSON.stringify(arrayGuard));
+        sessionStorage.removeItem("idGuardToUpdate");
+        location.href = "lista_guardas.html";
     }
-    var table = document.getElementById("users_table");
-    if (table != null) {
-        table.innerHTML = null;
-    }
-    arrayUser.forEach(function (usuario, index, arrayUser) {
-            tableUser(usuario)
-    });
-}
-
-function tableUser(usuarios) {
-    var table = document.getElementById("users_table");
-    var row = "<tr><td>" + usuarios.apartment + "</td><td>" + usuarios.name + "</td><td>" + usuarios.lastname + "</td><td>" + usuarios.email + "</td><td>" + usuarios.phone + "</td><td>" + usuarios.password + "</td></tr>";
-    table.innerHTML = table.innerHTML + row;
-}
-
-
-function getGuard() {
-    var arrayGuard = [];
-    if (localStorage.getItem("guard")) {
-        arrayGuard = JSON.parse(localStorage.getItem("guard"));
-    }
-    var table = document.getElementById("guards_table");
-    if (table != null) {
-        table.innerHTML = null;
-    }
-    arrayGuard.forEach(function (usuario, index, arrayGuard) {
-            tableGuard(usuario)
-    });
 }
 
 
-function tableGuard(usuarios) {
-    var table = document.getElementById("guards_table");
-    var row = "<tr><td>" + usuarios.name + "</td><td>" + usuarios.lastname + "</td><td>" + usuarios.email + "</td><td>" + usuarios.phone + "</td><td>" + usuarios.password + "</td></tr>";
-    table.innerHTML = table.innerHTML + row;
+
+function getLastId(tableLocalStorage) {
+    var ret = 1;
+    var array = JSON.parse(localStorage.getItem(tableLocalStorage));
+    if (array != null && array != undefined && array.length > 0) {
+        ret = array[array.length - 1].id + 1;
+    }
+    return ret;
 }
+
+function userLogueado(user) {
+    var userLog = {
+        "userLog": user
+    }
+    sessionStorage.setItem("logIn", JSON.stringify(user));
+}
+
+
+
